@@ -42,7 +42,7 @@ function! asyncomplete#sources#file#completor(opt, ctx)
   else
     let l:glob = fnamemodify(l:cwd, ':t') . '.\=[^.]*'
   endif
-  let l:cwd  = fnamemodify(l:cwd, ':p:h')
+  let l:cwd  = $PWD
   let l:pre  = fnamemodify(l:kw, ':h')
 
   if l:pre !~ '/$'
